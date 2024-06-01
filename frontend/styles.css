@@ -19,6 +19,7 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 0px;
+  cursor: pointer;
 }
 
 .heading {
@@ -49,28 +50,29 @@
 #comp,
 .feels-like,
 #feels-like {
-  transition: 0.6 ease-in-out;
   background-color: white;
   margin-bottom: 5px;
   color: black;
   font-size: 20px;
   vertical-align: top;
-  font-weight: 400;
+  font-weight: 450;
+  animation: opacity 1s;
 }
 
 .submit-btn {
+  transition: background-color 0.2s ease-in-out;
   font-size: 20px;
   border: none;
   border-radius: 13px;
-  padding: 10px 15px;
+  padding: 12px 17px;
   margin: 5px;
   color: white;
-  background-color: #0b33e3;
+  background-color: #244dff;
   cursor: pointer;
 }
 
 .submit-btn:hover {
-  background-color: #0b2ab3;
+  background-color: #1636c2;
 }
 
 .card {
@@ -78,7 +80,8 @@
 }
 
 .display-card {
-  transition: 0.6 ease-in;
+  animation: fadein 1.5s ease-in-out;
+  transition: transform 0.2s ease-out;
   display: inline;
   background-color: white;
   border-radius: 20px;
@@ -88,6 +91,10 @@
   padding: 40px 40px;
   margin: 15px auto;
   text-align: center;
+}
+
+.display-card:hover {
+  transform: translateY(-7px);
 }
 
 img {
@@ -108,4 +115,13 @@ img {
   font-size: 30px;
   font-weight: 600;
   margin-bottom: 10px;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opactiy: 1;
+  }
 }

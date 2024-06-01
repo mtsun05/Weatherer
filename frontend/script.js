@@ -73,7 +73,7 @@ function displayData(json) {
     toDisplay.windSpeed + "m/s";
   document.querySelector(".wind-direction").innerHTML +=
     toDisplay.windDirection;
-  document.querySelector(".feels-like").innerHTML += toDisplay.feelsLike;
+  document.querySelector(".feels-like").innerHTML += toDisplay.feelsLike + "°C";
 
   console.log(toDisplay);
 }
