@@ -31,10 +31,8 @@ function getWeatherData() {
 }
 
 function fetchWeatherData(city) {
-  const apiKey = "0b66c592b27b1666ab468ae98bd7a19b";
-
   // const url = `https://api.weather.com/v1/location/${city.toLowerCase().replace(/\s/g, '')}:9:US/observations/historical.json?apiKey=YOUR_API_KEY&startDate=${date}&endDate=${date}`;
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${process.env.apiKey}`;
 
   fetch(url)
     .then((response) => response.json())
